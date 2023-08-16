@@ -14,3 +14,6 @@ Small template with minimal components to begin a new express api project. Maded
 - `npm install`
 
 ## Notes
+
+- `npx tsc -w` (Linux) or `tsc -w` (Windows): to compile typescript files
+- `npm run dev`: to run the server. You can change port in .env file
