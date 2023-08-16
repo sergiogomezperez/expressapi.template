@@ -1,7 +1,7 @@
 # expressapi.templates
 
 ## Description
-Small template to begin a new express api project. Maded with typescript y express.
+Small template with minimal components to begin a new express api project. Maded with typescript and express.
 
 ## Dependencies
 - "cors": "^2.8.5",
@@ -9,5 +9,8 @@ Small template to begin a new express api project. Maded with typescript y expre
 - "express": "^4.18.2",
 - "express-favicon": "^2.0.4",
 - "morgan": "^1.10.0"
+
+## Setup
+- `npm install`
 
 ## Notes

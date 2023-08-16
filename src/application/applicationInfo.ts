@@ -17,8 +17,8 @@ export class ApplicationInfo {
         this.description = process.env.APP_DESCRIPTION || '';
         this.developed_by = process.env.APP_DEVELOPED_BY || '';
         this.copyright = process.env.APP_COPYRIGHT || '';
-        this.osVersion = os.version() + " " + os.arch() + " " + os.release();
+        this.osVersion = `${os.version()} ${os.arch()} ${os.release()}`;
         this.osComputerName = os.hostname();
-        this.osComputerFreeMem = (os.freemem() / 1024 / 1024).toFixed(2) + " GB. / " + (os.totalmem() / 1024 / 1024).toFixed(2) + " GB.";
+        this.osComputerFreeMem = `${(os.freemem() / 1024 / 1024).toFixed(2)}GB. / ${(os.totalmem() / 1024 / 1024).toFixed(2)}GB.`;
     }
 }
