@@ -7,7 +7,7 @@ const favicon = require('express-favicon');
 
 //Express settings
 app.set('port', process.env.PORT || 3010);
-app.use(favicon(__dirname + '/public/images/favicon.png'));
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 //Cors
 app.use(cors());
