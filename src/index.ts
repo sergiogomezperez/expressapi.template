@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import { ApplicationInfo } from './application/applicationInfo'; 
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
@@ -19,8 +20,12 @@ app.use(morgan('dev'));
 app.use('/', require('./routes/root'));
 
 //Start server
+
 app.listen(app.get('port'), () => {
-    console.log(`🔹 Template for TypeScript + Express + NodeJS API REST`);
+    const appInfo = new ApplicationInfo();
+    console.log(`🔹 ${appInfo.name.toUpperCase()} ${appInfo.version}`)
+    console.log(`🔹 Developed by ${appInfo.developed_by}`);
+    console.log(`=============================================`);
     console.log(`🔹 Morgan is running and listening`);
     console.log(`🔹 Express Server is running and listening: http://127.0.0.1:${app.get('port')}`);
 });
