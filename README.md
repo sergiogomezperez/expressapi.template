@@ -15,5 +15,5 @@ Small template with minimal components to begin a new express api project. Maded
 
 ## Notes
 
-- `npx tsc -w` (Linux) or `tsc -w` (Windows): to compile typescript files
+- `npx tsc -w` (Linux) or `tsc -w` (Windows): to compile typescript files to javascript files and keeping it updated when changes are made.
 - `npm run dev`: to run the server. You can change port in .env file
