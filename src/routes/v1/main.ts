@@ -5,16 +5,11 @@ routerMain.get('/getSampleEntity/', (req, res) => {
     res.status(200)
     res.json({
         name: 'John Doe',
-        age: cal(10, 2),
+        age: 33,
+        date: new Date().toISOString()
     });
 
     return res;
 });
  
 module.exports = routerMain;
-
-const cal = (a: number, b: number): number => {
-  const c: string = 'hello';
-  
-    return a + b;
-}

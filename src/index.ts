@@ -1,11 +1,11 @@
 import 'dotenv/config';
 import { ApplicationInfo } from './application/applicationInfo'; 
-const express = require('express');
-const app = express();
-const morgan = require('morgan');
-const cors = require('cors');
-const favicon = require('express-favicon');
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
+import favicon from 'express-favicon';
 
+const app = express();
 //Express settings
 app.set('port', process.env.PORT || 3010);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
