@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import { ApplicationInfo } from '../application/applicationInfo'; 
-import { write } from 'fs';
 
 const routerRoot = Router();
 
