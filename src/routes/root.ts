@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { ApplicationInfo } from '../application/applicationInfo'; 
+import { write } from 'fs';
 
 const routerRoot = Router();
 
@@ -19,6 +20,9 @@ routerRoot.get('/', (req, res) => {
     res.write(`💾 ${app.osVersion} environment`);
     res.write('<br>');
     res.write(`💻 ${app.osComputerName} (${app.osComputerFreeMem})`);
+    res.write('<br>');
+    res.write(`<hr>`);
+    res.write(`<a href="/v1/getSampleEntity/">Sample Call</a>`);
     res.write(`</body></html>`);
     res.end();
 });

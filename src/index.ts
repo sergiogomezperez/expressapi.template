@@ -6,15 +6,17 @@ import cors from 'cors';
 import favicon from 'express-favicon';
 
 const app = express();
-//Express settings
+
+//Express settings  
 app.set('port', process.env.PORT || 3010);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
 
 //Cors
 app.use(cors());
 
-//Middleware
+//Middlewares
 app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: false })); // Gestión de los datos de los formularios POST
 
 ///Routes
 app.use('/', require('./routes/root'));
