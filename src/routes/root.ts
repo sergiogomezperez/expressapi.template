@@ -22,6 +22,8 @@ routerRoot.get('/', (req, res) => {
     res.write('<br>');
     res.write(`<hr>`);
     res.write(`<a href="/v1/getSampleEntity/">Sample Call</a>`);
+    res.write('<br>');
+    res.write(`<a href="/v1/markMailAsCommercialRequest/id=1">Sample Call 2</a>`);
     res.write(`</body></html>`);
     res.end();
 });

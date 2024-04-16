@@ -4,6 +4,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import favicon from 'express-favicon';
+import bodyParser from 'body-parser'
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use(cors());
 //Middlewares
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false })); // Gestión de los datos de los formularios POST
+app.use(bodyParser.json()); //Handles JSON requests
+app.use(bodyParser.urlencoded({ extended: false })); //Handles normal post requests
 
 ///Routes
 app.use('/', require('./routes/root'));
