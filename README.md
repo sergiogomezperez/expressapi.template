@@ -1,14 +1,19 @@
-# expressapi.templates
+# api.ai.hidramargroup.com
 
 ## Description
-Small template with minimal components to begin a new express api project. Maded with typescript and express.
+Pequeña REST API para permitir la introducción de datos para el futuro entrenamiento de la AI
 
 ## Dependencies
-- "cors": "^2.8.5",
-- "dotenv": "^16.3.1",
-- "express": "^4.18.2",
-- "express-favicon": "^2.0.4",
+- "axios": "^1.6.7"
+- "body-parser": "^1.20.2"
+- "cors": "^2.8.5"
+- "dotenv": "^16.3.1"
+- "express": "^4.18.2"
+- "express-favicon": "^2.0.4"
+- "mariadb": "^3.3.0"
 - "morgan": "^1.10.0"
+- "sequelize": "^6.37.3"
+- "yargs": "^17.7.2"
 
 ## Setup
 - `npm install`
