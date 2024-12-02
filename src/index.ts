@@ -8,9 +8,11 @@ import bodyParser from 'body-parser'
 
 const app = express();
 
+
 //Express settings  
-app.set('port', process.env.PORT || 3010);
-app.use(favicon(__dirname + '/public/images/favicon.png'));
+ApplicationInfo.initializeFromEnvFile();
+app.set('port', ApplicationInfo.port || 4000);
+app.use(favicon(__dirname + '/public/images/favicon.png')); // Ejecutar npm run copy-files-linux o npm run copy-files-windows
 
 //Cors
 app.use(cors());
@@ -26,11 +28,9 @@ app.use('/', require('./routes/root'));
 app.use('/v1/', require('./routes/v1/main'));
 
 //Start server
-
 app.listen(app.get('port'), () => {
-    const appInfo = new ApplicationInfo();
-    console.log(`🔹 ${appInfo.name.toUpperCase()} ${appInfo.version}`)
-    console.log(`🔹 Developed by ${appInfo.developed_by}`);
+    console.log(`🔹 ${ApplicationInfo.appName.toUpperCase()} ${ApplicationInfo.version}`)
+    console.log(`🔹 Developed by ${ApplicationInfo.developed_by}`);
     console.log(`=============================================`);
     console.log(`🔹 Morgan is running and listening`);
     console.log(`🔹 Express Server is running and listening: http://127.0.0.1:${app.get('port')}`);
