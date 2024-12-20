@@ -20,8 +20,6 @@ routerRoot.get('/', (req, res) => {
     res.write('<br>');
     res.write(`<hr>`);
     res.write(`<a href="/v1/getSampleEntity/">Sample Call</a>`);
-    res.write(`<br>`);
-    res.write(`<a href="/v1/getExpectedArrivals/">Call getExpectedArrivals</a>`);
     res.write(`</body></html>`);
     res.end();
 });
