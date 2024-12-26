@@ -1,9 +1,20 @@
-import crypto from 'crypto';
-import { Router } from 'express';
-const routerMain = Router();
-const databaseHelper = require('../../database/databaseHelper');
+import { Router, Request, Response } from 'express';
+import { ApplicationInfo } from '../../application/main';
+import { verifyToken } from '../../security/authMiddleware';
+import '../../database/databaseHelper'
 
-routerMain.get('/getSampleEntity/', (req, res) => {
+const routerMain = Router();
+
+routerMain.get('/getAboutAPI', (req: Request, res: Response) => {
+    const app = new ApplicationInfo();
+    
+    res.status(200)
+    res.json(app);
+
+    return res;
+});
+
+routerMain.get('/getSampleEntity/', (req: Request, res: Response) => {
     res.status(200)
     res.json({
         name: 'John Doe',
@@ -14,24 +25,14 @@ routerMain.get('/getSampleEntity/', (req, res) => {
     return res;
 });
 
-routerMain.post('/createCommercialOfferRequestItem/', (req, res) => {
-    try {
-        const mail: any = databaseHelper.createClassifiedMail(req.body, true);
-        
-        res.status(200)
-        res.json({
-            result: 'ok',
-            message: 'ok'
-        });
-    }
-    catch(err) {
-        res.status(500)
-        res.json({
-            result: 'error',
-            message: 'Error creating commercial offer request item'
-        });
-    }
-   
+routerMain.get('/getSampleEntityWithSecurity/', verifyToken, (req: Request, res: Response) => {
+    res.status(200)
+    res.json({
+        name: 'John Doe',
+        age: 33,
+        date: new Date().toISOString()
+    });
+
     return res;
 });
  

@@ -1,3 +1,7 @@
+### SECURITY ###
+SECURITY_TYPE = 'Bearer' # Bearer, Basic, Digest, HOBA, Mutual, AWS4-HMAC-SHA256, Hawk, OAuth, JWT, SAML, NTLM, Kerberos, Custom
+SECURITY_BEARER_TOKEN = 'KOBO5SMhZHAIOfa0IaPIFp65VwWSZaJL6TR23AgCqM1FVxa80bWmvKppIYGBXLjzmyp3iVGsXVhxoTvsGghFiPBmYsrHjmfLDc53a9v1JXd2Wzp9kM1qFDEzuWOIbkwE' # Bearer token for API security
+
 ### APPLICATION ###
 PORT = 3099
 APP_NAME = 'Express REST API Template'
