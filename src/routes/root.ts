@@ -3,7 +3,6 @@ import { ApplicationInfo } from '../application/main';
 
 const routerRoot = Router();
 
-//ROOT
 routerRoot.get('/', (req, res) => {
     const applicationInfo = new ApplicationInfo();
 

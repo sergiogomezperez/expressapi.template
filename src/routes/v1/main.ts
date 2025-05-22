@@ -14,12 +14,12 @@ routerMain.get('/getAboutAPI', (req: Request, res: Response) => {
     return res;
 });
 
-routerMain.get('/getSampleEntity/', (req: Request, res: Response) => {
+routerMain.get('/getSampleEntity', (req: Request, res: Response) => {
     res.status(200)
     res.json({
         name: 'John Doe',
         age: 33,
-        date: new Date().toISOString()
+        requestDate: new Date().toISOString()
     });
 
     return res;
@@ -30,7 +30,7 @@ routerMain.get('/getSampleEntityWithSecurity/', verifyToken, (req: Request, res:
     res.json({
         name: 'John Doe',
         age: 33,
-        date: new Date().toISOString()
+        requestDate: new Date().toISOString()
     });
 
     return res;

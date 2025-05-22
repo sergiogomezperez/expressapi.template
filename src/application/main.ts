@@ -10,8 +10,6 @@ export class ApplicationInfo {
     osVersion: String;
     osComputerName: String;
     osComputerFreeMem: String;
-    emailVerifierBaseURL: String;
-    emailVerifierToken: String;
     securityType: String;
 
     constructor() {
@@ -23,8 +21,6 @@ export class ApplicationInfo {
         this.osVersion = os.version() + " " + os.arch() + " " + os.release();
         this.osComputerName = os.hostname();
         this.osComputerFreeMem = (os.freemem() / 1024 / 1024).toFixed(2) + " GB. / " + (os.totalmem() / 1024 / 1024).toFixed(2) + " GB.";
-        this.emailVerifierBaseURL = process.env.EMAIL_VERIFIER_BASEURL || '';
-        this.emailVerifierToken = process.env.EMAIL_VERIFIER_ || '';
         this.securityType = process.env.SECURITY_TYPE || '';
     }
 }
