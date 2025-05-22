@@ -28,7 +28,7 @@ app.use('/', require('./routes/root'));
 app.use('/v1/', require('./routes/v1/main'));
 
 //Swagger
-const swaggerOptions = {
+const swaggerOptions: any = {
     swaggerDefinition: {
       openapi: '3.0.0',
       info: {
