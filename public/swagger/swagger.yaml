@@ -1,0 +1,56 @@
+openapi: 3.0.1
+info:
+  title: expressapi.template
+  version: "v1.0.0"
+  description: Proyecto de una plantilla para pequeñas REST API
+servers:
+  - url: /v1
+    description: Development server
+  - url: "http://api.mobile.hidramargroup.com/v1"
+    description: Production server
+paths:
+  /getSampleEntity:
+    get:
+      operationId: getSampleEntity
+      responses:
+        "200":
+          description: SampleEntity
+          content:
+            application/json:
+              schema: 
+                $ref: "#/components/schemas/SampleEntity"
+  /getSampleEntityWithSecurity:
+    get:
+      security:
+        - bearerAuth: []
+      operationId: getSampleEntityWithSecurity
+      responses:
+        "200":
+          description: SampleEntity
+          content:
+            application/json:
+              schema: 
+                $ref: "#/components/schemas/SampleEntity"
+        "401":
+          description: SampleEntity
+          content:
+            application/json:
+              schema: 
+                $ref: "#/components/schemas/SampleEntity"
+components:
+  securitySchemes:
+    bearerAuth: # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT # optional, arbitrary value for documentation purposes
+  schemas:
+    SampleEntity:
+      type: object
+      properties:
+        name:
+          type: string
+        age:
+          type: integer
+          format: int32
+        requestDate:
+          type: string

@@ -2,15 +2,15 @@ import 'dotenv/config';
 import os from 'os';
 
 export class ApplicationInfo {
-    name: String;
-    version: String;
-    description: String;
-    developed_by: String;
-    copyright: String;
-    osVersion: String;
-    osComputerName: String;
-    osComputerFreeMem: String;
-    securityType: String;
+    name: string;
+    version: string;
+    description: string;
+    developed_by: string;
+    copyright: string;
+    osVersion: string;
+    osComputerName: string;
+    osComputerFreeMem: string;
+    securityType: string;
 
     constructor() {
         this.name = process.env.APP_NAME || '';

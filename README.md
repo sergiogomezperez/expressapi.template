@@ -1,7 +1,7 @@
 # expressapi.template
 
 ## Description
-Proyecto de una plantilla para qequeñas REST API
+Proyecto de una plantilla para pequeñas REST API
 
 ## Dependencies
 - "axios": "^1.6.7",
