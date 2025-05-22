@@ -1,7 +1,7 @@
-# api.ai.hidramargroup.com
+# expressapi.template
 
 ## Description
-Pequeña REST API para permitir la introducción de datos para el futuro entrenamiento de la AI
+Proyecto de una plantilla para qequeñas REST API
 
 ## Dependencies
 - "axios": "^1.6.7"
