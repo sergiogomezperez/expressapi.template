@@ -6,7 +6,7 @@ info:
 servers:
   - url: /v1
     description: Development server
-  - url: "http://api.mobile.hidramargroup.com/v1"
+  - url: "http://servidor.produccion.com/v1"
     description: Production server
 paths:
   /getSampleEntity:
